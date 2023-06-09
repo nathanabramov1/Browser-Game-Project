@@ -1,0 +1,52 @@
+#container {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  #game-board {
+    border-collapse: collapse;
+  }
+  
+  td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 48px;
+    font-weight: bold;
+    background-color: white;
+  }
+
+  h1{
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-left: 14em;
+    margin-right: 14em;
+    
+  }
+
+  body {
+    background-color: #485b6e;
+    height: 100vh;
+  }
+
+  #cell-0 , #cell-1, #cell-2, #cell-3, #cell-4, #cell-5, #cell-6, #cell-7, #cell-8{
+    border: none;
+  }
+
+  button{
+    background-color: darkred;
+    margin: 0;
+    border: none;
+    padding: 10px;
+    margin-left: 40em;
+  }
