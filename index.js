@@ -46,3 +46,14 @@ function addEventListeners(){
 }
 
 addEventListeners()
+
+//switch the player after each move
+function switchplayer() {
+    if (currentPlayer === 'X') {
+        currentPlayer = 'O'
+    } else {
+        currentPlayer = 'X'
+    }
+    displaymessage(`player ${currentPlayer}'s turn!`)
+}
+
