@@ -9,8 +9,8 @@
   
 }
 
-#game-board {
-  border-collapse: collapse;
+.tableBoard{
+  margin-bottom: 0.5em;
 }
 
 td {
@@ -31,7 +31,7 @@ h1{
   border-radius: 20px;
   margin-left: 14em;
   margin-right: 14em;
-  margin-bottom: 1.7em;
+  margin-bottom: 1em;
 }
 
 h2{
@@ -61,6 +61,14 @@ body {
 
 .active{
   color:crimson
+}
+
+#game-message{
+  color: white;
+}
+
+.winner{
+
 }
 
 #button{

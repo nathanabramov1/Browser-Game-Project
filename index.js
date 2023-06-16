@@ -6,8 +6,8 @@ let board = [
 
 // Determine the first player in the game//
 function determineFirstPlayer() {
-    let player1 = math.random()
-    let player2 = math.random()
+    let player1 = Math.random()
+    let player2 = Math.random()
     if (player1 > player2) {
         return 'X'
     } else {
@@ -55,5 +55,50 @@ function switchplayer() {
         currentPlayer = 'X'
     }
     displaymessage(`player ${currentPlayer}'s turn!`)
+}
+
+//check for winner
+
+function checkForWinner() {
+  let winningCombos = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6]
+  ]
+
+  let winner = null
+
+  winningCombos.forEach((combination) => {
+    let [a,b,c] = combination
+    if(board[a] !== null && board[a] === board[b] && board[b] === board[c]){
+        winner = board[a]
+        highlightWinnerCells(combination)
+    }
+  })
+
+  if (winner!== null) {
+    displaymessage(`${winner} has won the game!`) // come back to this later
+    removeEventListeners()
+  }
+}
+//check for a tie
+
+function checkForTie() {
+  if(!board.includes(null)){
+    displaymessage('It\'s a tie!')
+    removeEventListeners()
+}
+}
+//update the board after each move
+function updateBoard(index) {
+    board[index] = currentPlayer
+    let cell = cells[index]
+    cell.innerText = currentPlayer
+    cell.classList.add('active')
 }
 
