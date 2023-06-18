@@ -30,6 +30,9 @@ displaymessage(`player ${currentPlayer}'s turn!`)
 let cells = document.querySelectorAll('td')
 
 
+// this section was provided to me by a freind of mine that graduated the NYU course
+// he helped me when my removEventListeners() function was not working
+//**code contributors*(Gavreal Aminov)/
 const cellClickListener = (event) => {
     const index = Array.from(cells).indexOf(event.target);
     if (board[index] === null) {
@@ -140,6 +143,7 @@ function restartGame() {
     displaymessage(`player ${currentPlayer}'s turn!`)
     addEventListeners()
 }
+
 
 
 
