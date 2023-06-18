@@ -29,22 +29,19 @@ displaymessage(`player ${currentPlayer}'s turn!`)
 //add an event listener to each cell and update it after making a move//
 let cells = document.querySelectorAll('td')
 
+function addEventListeners(){
+    cells.forEach((cell,index) => {
+        cell.addEventListener('click', () => {
+            if (board[index] === null) {
+                updateBoard(index)
+                checkForWinner()
+                checkForTie()
+            }
+        })
+       
+    })
+}
 
-const cellClickListener = (event) => {
-    const index = Array.from(cells).indexOf(event.target);
-    if (board[index] === null) {
-      updateBoard(index);
-      checkForWinner();
-    }
-  };
-  
-
-  function addEventListeners() {
-    cells.forEach((cell) => {
-      cell.addEventListener('click', cellClickListener);
-    });
-  }
-  
 addEventListeners()
 
 //switch the player after each move
@@ -85,8 +82,6 @@ function checkForWinner() {
   if (winner!== null) {
     displaymessage(`${winner} has won the game!`) // come back to this later
     removeEventListeners()
-  } else{
-    checkForTie()
   }
 }
 
@@ -120,10 +115,11 @@ function updateBoard(index) {
 // remove event listeners from the cells
 
 function removeEventListeners() {
-    cells.forEach((cell) => {
-      cell.removeEventListener('click', cellClickListener);
-    });
-  }
+    cells.forEach(cell => {
+        cell.removeEventListener('click',switchplayer)
+    })
+}
+
 //restart the game
 
 function restartGame() {
@@ -143,4 +139,7 @@ function restartGame() {
 
 
 
-      
+                               //Problems
+//remove event listener does not work
+//if u win on the last cell it says its a tie, it should display a winner message
+
