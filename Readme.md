@@ -4,3 +4,4 @@ i used the github repository that panos our previous instuctor gave to us as a s
 
 The insperation for the styling of the game came from https://codepen.io/ArmandoAmador/pen/AEdQBG
 
+This is a two player game, to play u can click on an empty box then ur apponent will make there move until there is either a winner or it will be declared a tie. 

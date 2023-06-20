@@ -1,7 +1,7 @@
 let board = [
     null,null, null,
     null,null, null,
-    null,null, null
+    null,null, null,
 ]
 
 // Determine the first player in the game//
