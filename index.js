@@ -6,15 +6,14 @@ let board = [
 
 // Determine the first player in the game//
 function determineFirstPlayer() {
-    let player1 = Math.random()
-    let player2 = Math.random()
-    if (player1 > player2) {
-        return 'X'
-    } else {
-        return 'O'
-    }
+  let player1 = Math.random()
+  let player2 = Math.random()
+  if (player1 > player2) {
+      return 'X'
+  } else {
+      return 'O'
+  }
 }
-
 let currentPlayer = determineFirstPlayer()
 
 //displays a message to the user indicating whos turn it is//
@@ -143,6 +142,8 @@ function restartGame() {
     displaymessage(`player ${currentPlayer}'s turn!`)
     addEventListeners()
 }
+
+
 
 
 
