@@ -85,7 +85,7 @@ function checkForWinner() {
   })
 
   if (winner!== null) {
-    displaymessage(`${winner} has won the game!`) // come back to this later
+    displaymessage(`${winner} has won the game!`) 
     removeEventListeners()
   } else{
     checkForTie()
